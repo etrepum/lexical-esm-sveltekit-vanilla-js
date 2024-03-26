@@ -12,6 +12,8 @@
 	import { HeadingNode, QuoteNode, registerRichText } from '@lexical/rich-text';
 	import { mergeRegister } from '@lexical/utils';
 	import { createEditor } from 'lexical';
+	import { registerMarkdownShortcuts, DEFAULT_TRANSFORMERS } from '@lexical/markdown';
+	import { $isRootTextContentEmptyCurry as isRootTextContentEmptyCurry } from '@lexical/text';
 
 	import prepopulatedRichText from '$lib/prepopulatedRichText';
 	import { onMount } from 'svelte';
@@ -39,6 +41,7 @@
 		mergeRegister(
 			registerRichText(editor),
 			registerDragonSupport(editor),
+			registerMarkdownShortcuts(editor, DEFAULT_TRANSFORMERS),
 			registerHistory(editor, createEmptyHistoryState(), 300)
 		);
 
