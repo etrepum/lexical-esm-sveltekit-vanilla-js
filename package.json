@@ -40,8 +40,10 @@
 	"type": "module",
 	"dependencies": {
 		"@lexical/dragon": "^0.14.1",
+		"@lexical/markdown": "^0.14.1",
 		"@lexical/history": "^0.14.1",
 		"@lexical/rich-text": "^0.14.1",
+		"@lexical/text": "^0.14.1",
 		"@lexical/utils": "^0.14.1"
 	}
 }
